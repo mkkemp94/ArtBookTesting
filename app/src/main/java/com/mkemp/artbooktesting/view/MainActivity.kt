@@ -1,7 +1,8 @@
-package com.mkemp.artbooktesting
+package com.mkemp.artbooktesting.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.mkemp.artbooktesting.R
 
 class MainActivity : AppCompatActivity()
 {
