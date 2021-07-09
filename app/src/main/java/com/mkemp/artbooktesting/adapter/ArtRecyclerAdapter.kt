@@ -30,7 +30,6 @@ class ArtRecyclerAdapter @Inject constructor(
         {
             return oldItem == newItem
         }
-        
     }
     
     private val recyclerListDiffer = AsyncListDiffer(this, diffUtil)
