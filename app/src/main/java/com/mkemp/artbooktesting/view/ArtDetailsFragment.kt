@@ -5,10 +5,14 @@ import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.RequestManager
 import com.mkemp.artbooktesting.R
 import com.mkemp.artbooktesting.databinding.FragmentArtDetailsBinding
+import javax.inject.Inject
 
-class ArtDetailsFragment : Fragment(R.layout.fragment_art_details)
+class ArtDetailsFragment @Inject constructor(
+        val glide: RequestManager
+) : Fragment(R.layout.fragment_art_details)
 {
     private var fragmentBinding: FragmentArtDetailsBinding? = null
     
@@ -20,13 +24,15 @@ class ArtDetailsFragment : Fragment(R.layout.fragment_art_details)
         fragmentBinding = binding
         
         binding.artImageView.setOnClickListener {
-            findNavController().navigate(ArtDetailsFragmentDirections.actionArtDetailsFragmentToImageApiFragment())
+            findNavController().navigate(
+                    ArtDetailsFragmentDirections.actionArtDetailsFragmentToImageApiFragment())
         }
         
         // This isn't needed with its current functionality,
         // but if we wanted to do something else on back pressed,
         // put it here.
-        val callback = object : OnBackPressedCallback(true) {
+        val callback = object : OnBackPressedCallback(true)
+        {
             override fun handleOnBackPressed()
             {
                 findNavController().popBackStack()
