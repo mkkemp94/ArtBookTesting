@@ -1,69 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/artImageView"
         android:layout_width="300dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="73dp"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="73dp"
         android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/nameText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <EditText
         android:id="@+id/nameText"
-        android:layout_width="200dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:hint="Enter Name"
-        android:ems="20"
-        app:layout_constraintBottom_toTopOf="@+id/artistText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/artImageView" />
+        android:ems="20"/>
 
     <EditText
         android:id="@+id/artistText"
-        android:layout_width="200dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:hint="Enter Artist"
-        android:ems="20"
-        app:layout_constraintBottom_toTopOf="@+id/yearText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+        android:ems="20"/>
 
     <EditText
         android:id="@+id/yearText"
-        android:layout_width="200dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:hint="Enter Year"
-        android:ems="20"
-        app:layout_constraintBottom_toTopOf="@+id/saveButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/artistText" />
+        android:ems="20"/>
 
     <Button
         android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="Save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yearText" />
+        android:layout_margin="20dp"
+        android:text="Save"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

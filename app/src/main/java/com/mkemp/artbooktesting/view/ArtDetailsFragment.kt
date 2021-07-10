@@ -37,6 +37,8 @@ class ArtDetailsFragment @Inject constructor(
                     ArtDetailsFragmentDirections.actionArtDetailsFragmentToImageApiFragment())
         }
         
+        subscribeToObservers()
+        
         // This isn't needed with its current functionality,
         // but if we wanted to do something else on back pressed,
         // put it here.
